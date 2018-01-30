@@ -7,7 +7,8 @@ This program allows for the creation of configurable memory caches. The cache ca
 
 ## Classes:
 
-**Cache:** This class uses the Block and Set Classes to simulate different cache configurations for different access patterns. 
+### Cache
+This class uses the Block and Set Classes to simulate different cache configurations for different access patterns. 
 
 The cache is initialized by the initialize method. Initialize takes the configurable variables as arguments then verifies that the format of the configurable variables are correct. If so these variables are stored globally.
 
@@ -18,8 +19,8 @@ The printStatistics Method is another important method in the Cache class. It Pr
 Lastly, Cache contains a vector, myCache, which contains all of the cache's sets.
 
 
-
-**Set:** This class holds information about a single cache set. It stores values for different fields such as: setIndex, currTag, hitCounter, setAssoc, currBCapacity and currBlock_size. setIndex is used to store the index of the current set in the cache. currTag contains the tag of the current access to the set. hitCounter is used to store the number of hits for the current set.
+### Set
+This class holds information about a single cache set. It stores values for different fields such as: setIndex, currTag, hitCounter, setAssoc, currBCapacity and currBlock_size. setIndex is used to store the index of the current set in the cache. currTag contains the tag of the current access to the set. hitCounter is used to store the number of hits for the current set.
 
 Set contains two initialize methods, which are both used by Cache in the appropriate situation. initializeVars only initializes the variables given as arguments and by using these initializes currTag. initializeDefaultSet calls initializeVars, and also creates populates the set with the correct number of Blocks.
 
@@ -30,8 +31,8 @@ incLRU is another important method in the set class. It takes in 3 arguments: ed
 Lastly, Set contains a vector, mySet, which contains all of the cache's sets.
 
 
-
-**Block:** This class holds information about a single cache block. It stores values for different fields such as: validBit, index, tag, offset, lru, assoc, capac, bSize, numBlocks and blockAddr. Block also contains methods to access and edit the values of the aforementioned objects.
+### Block
+This class holds information about a single cache block. It stores values for different fields such as: validBit, index, tag, offset, lru, assoc, capac, bSize, numBlocks and blockAddr. Block also contains methods to access and edit the values of the aforementioned objects.
 
 The most important methods in Block are initializeBlock and parseAddress.
 
